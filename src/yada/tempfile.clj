@@ -108,4 +108,5 @@
 
 (defn start-server
   [port]
-  (http/start-server (make-handler {}) {:port port}))
+  (http/start-server (make-handler {}) {:port port
+                                        :raw-stream? true}))
